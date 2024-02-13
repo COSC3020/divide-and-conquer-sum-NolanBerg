@@ -1,14 +1,20 @@
-function divideAndConquerSum(a) {
-return divideAndConquerSum(a, 0, a.length-1);
+function divideAndConquerSum(arr, low, high) {
+    while (low <= high) {
+        if (low === high) {
+            return arr[low];
+        }
+
+        const oneThird = Math.floor((2 * low + high) / 3);
+        const twoThird = Math.floor((low + 2 * high) / 3);
+
+        return (
+            divideAndConquerSum(arr, low, oneThird) +
+            divideAndConquerSum(arr, oneThird + 1, twoThird) +
+            divideAndConquerSum(arr, twoThird + 1, high)
+        );
+    }
+
+    return 0;
 }
 
-function divideAndConquerSum(a, low, high) {
-
-if(high == low)
-return a[low];
-
-var mid1 = low + (high - low)/3;
-var mid2 = mid1 + (high - low)/3;
-
-return divideAndConquerSum(a, low, mid1 - 1) + divideAndConquerSum(a, mid1 + 1, mid2 - 1) + divideAndConquerSum(a, mid2 + 1, high);
-}
+module.exports = { divideAndConquerSum };
