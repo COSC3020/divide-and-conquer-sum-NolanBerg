@@ -65,4 +65,10 @@ Describe your reasoning and the conclusion you've come to. Your reasoning is the
 most important part. Add your answer to this markdown file.
 
 T(n) = log3n + Θ(1)
+
 Θ(log3n)
+
+In each recursive call, the input size is divided into three subproblems, represented by oneThird and twoThird. This results in a recurrence relation of 
+T(n) = log3n + Θ(1).
+
+The work done at each level of the recursion is Θ(log3n), as each element in the array is processed
