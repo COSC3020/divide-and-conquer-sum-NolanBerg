@@ -1,10 +1,8 @@
-const fs = require('fs');
 const jsc = require('jsverify');
+const { divideAndConquerSum } = require('./code.js');
 
-eval(fs.readFileSync('code.js')+'');
+const testDivideAndConquerSum = jsc.forall("array nat", function (arr) {
+    return divideAndConquerSum(arr, 0, arr.length - 1) === arr.reduce((a, b) => a + b, 0);
+});
 
-const test =
-    jsc.forall("array nat", function(arr) {
-        return JSON.stringify(divideAndConquerSum(arr)) == JSON.stringify(arr.reduce(function(a, b) { return a + b; }, 0));
-    });
-jsc.assert(test);
+jsc.assert(testDivideAndConquerSum);
