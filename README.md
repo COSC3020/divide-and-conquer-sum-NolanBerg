@@ -18,6 +18,43 @@ in merge sort, I want you to split into *three* sub-arrays at each divide step.
 Hint: Like in the implementation of merge sort, you may need a helper function
 that does the actual recursion.
 
+RESOURCES USED: Originally coded the sum of list in python and used ai to convert to js where divide and conquer sum function takes in array and adds elements together. Below is python code to compute sum of list without testing:
+
+def divide_and_conquer_sum(arr, low, high):
+
+while low <= high:
+
+if low == high:
+
+return arr[low]
+
+one_third = (2 * low + high) // 3
+
+two_third = (low + 2 * high) // 3
+
+return (
+
+divide_and_conquer_sum(arr, low, one_third) +
+
+divide_and_conquer_sum(arr, one_third + 1, two_third) +
+
+divide_and_conquer_sum(arr, two_third + 1, high)
+
+)
+
+return 0
+
+
+array = [1, 5, -1, 4]
+
+print(array)
+
+result = divide_and_conquer_sum(array, 0, len(array) - 1)
+
+print(result)  
+
+
+
 ## Runtime Analysis
 
 What is the runtime of the algorithm that you implemented? Provide a recurrence
