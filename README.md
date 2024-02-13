@@ -63,3 +63,6 @@ and solve it as we did in the lectures. Give the final $\Theta$ complexity.
 
 Describe your reasoning and the conclusion you've come to. Your reasoning is the
 most important part. Add your answer to this markdown file.
+
+T(n) = log3n + Θ(1)
+Θ(log3n)
