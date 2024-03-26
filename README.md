@@ -64,4 +64,6 @@ and solve it as we did in the lectures. Give the final $\Theta$ complexity.
 Describe your reasoning and the conclusion you've come to. Your reasoning is the
 most important part. Add your answer to this markdown file.
 
-The time complexity of this algorithm is \(O(n)\). It grows linearly because it sums all of the smaller subproblems during the recursion, resulting in a linear time complexity.
+Recurrence Relation: \[T(n) = 3T\left(\frac{n}{3}\right) + C\]
+
+The time complexity of this algorithm is \O(n)\. It grows linearly because it sums all of the smaller subproblems during the recursion, which results in a linear time complexity.
