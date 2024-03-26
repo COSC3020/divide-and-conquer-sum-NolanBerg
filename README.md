@@ -76,5 +76,7 @@ $T(n) = 3^iT\left(\frac{n}{3^i}\right) + iC$
 
 $T(n) = 3^{\log_3(n)}T(1) + nC = nT(1) + nC$
 
+-Finally this will lead to linear time
+
 
 The time complexity of this algorithm is $\theta(n)\$. It grows linearly because it sums all of the smaller subproblems during the recursion, which results in a linear time complexity.
