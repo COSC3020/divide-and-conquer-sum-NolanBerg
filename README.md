@@ -66,4 +66,4 @@ most important part. Add your answer to this markdown file.
 
 Recurrence Relation: $T(n)$ = $3T\left(\frac{n}{3}\right)$ + C
 
-The time complexity of this algorithm is \O(n)\. It grows linearly because it sums all of the smaller subproblems during the recursion, which results in a linear time complexity.
+The time complexity of this algorithm is $O(n)$. It grows linearly because it sums all of the smaller subproblems during the recursion, which results in a linear time complexity.
