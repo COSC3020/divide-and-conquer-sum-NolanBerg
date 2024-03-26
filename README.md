@@ -64,6 +64,10 @@ and solve it as we did in the lectures. Give the final $\Theta$ complexity.
 Describe your reasoning and the conclusion you've come to. Your reasoning is the
 most important part. Add your answer to this markdown file.
 
-Recurrence Relation: $T(n)$ = $3T\left(\frac{n}{3}\right)$ + C
+Recurrence Relation: $T(n) = $3T\left(\frac{n}{3}\right) + C$
+
+Solve Relation:
+
+$T(n) = 3^iT\left(\frac{n}{3^i}\right) + iC$
 
 The time complexity of this algorithm is $\theta(n)\$. It grows linearly because it sums all of the smaller subproblems during the recursion, which results in a linear time complexity.
